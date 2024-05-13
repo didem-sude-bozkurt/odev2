@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "Karanlık Mod Uzantısı",
+    "version": "1.0",
+    "description": "Tarayıcıda karanlık modu etkinleştiren bir uzantı.",
+    "permissions": [
+      "activeTab",
+      "tabs"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "css": ["styles.css"]
+      }
+    ]
+  }
+  

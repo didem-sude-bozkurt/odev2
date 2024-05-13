@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+  <script>
+    window.onload = function() {
+      var yapayZekaImage = document.querySelector('img[alt="Yapay Zeka"]');
+      yapayZekaImage.addEventListener('click', function() {
+        alert("Yapay Zeka Kulübü");
+      });
+
+      var ankaraImage = document.querySelector('img[alt="Ankara"]');
+      ankaraImage.addEventListener('click', function() {
+        var newImage = document.createElement('img');
+        newImage.src = 'ataturk.jpg';
+        newImage.alt = 'Atatürk';
+        newImage.style.width = '150px';
+        document.body.appendChild(newImage);
+      });
+    };
+  </script>
+</head>
+
+<body>
+  <nav id="anamenu">
+    <ul>
+      <li><a href="sablon.html">Anasayfa</a></li>
+      <li><a href="egitim.html">Eğitim</a></li>
+    </ul>
+  </nav>
+  <h1 class="blogbaslik">Burada Araştırdığım Konular Hakkında Blog Yazıları Paylaşıyorum</h1>
+  <br> </br>
+  <p class="blog1">
+    Yönetim Bilişim Sistemleri (YBS), günümüzün iş dünyasında hayati bir rol oynayan kritik bir alandır. Bu sistemler, bilgi teknolojilerinin ve işletme yönetiminin kesişim noktasında bulunur ve işletmelerin verimliliğini artırmak, karar alma süreçlerini
+    iyileştirmek ve rekabet avantajı elde etmek için kullanılır. İşletmelerin günlük iş süreçlerini yönetmek, bilgiyi toplamak, depolamak, işlemek ve paylaşmak için bilgi teknolojilerini kullanır. Bu sistemler, finans, muhasebe, stok yönetimi, insan
+    kaynakları ve müşteri ilişkileri gibi çeşitli iş alanlarında kullanılır.
+  </p>
+  <br></br>
+  <p class="blog2">
+    Ancak, Yönetim Bilişim Sistemleri uygulamalarının başarılı olması için doğru strateji, uygun teknoloji seçimi ve etkili bir değişim yönetimi gereklidir. Ayrıca, güvenlik ve gizlilik konularının da dikkate alınması önemlidir. Sonuç olarak, Yönetim
+    Bilişim Sistemleri, işletmelerin rekabet avantajı elde etmelerine, operasyonel etkinliklerini artırmalarına ve karar alma süreçlerini iyileştirmelerine yardımcı olan kritik bir bileşendir. Gelecekte, teknolojik gelişmelerle birlikte bu sistemlerin
+    rolü ve önemi daha da artacaktır.
+  </p>
+  <div class="images">
+    <img src="yapayzeka.jpg" alt="Yapay Zeka" style="width: 150px;">
+    <img src="ankara.jpg" alt="Ankara" style="width: 150px;">
+    <script>
+      window.onload = function() {
+        var yapayZekaImage = document.querySelector('img[alt="Yapay Zeka"]');
+        yapayZekaImage.addEventListener('click', function() {
+          alert("Yapay Zeka Kulübü");
+        });
+    
+        var ankaraImage = document.querySelector('img[alt="Ankara"]');
+        ankaraImage.addEventListener('mouseover', function() {
+          var newImage = document.createElement('img');
+          newImage.src = 'ataturk.jpg';
+          newImage.alt = 'Atatürk';
+          newImage.style.width = '150px';
+          newImage.style.position = 'absolute';
+          newImage.style.top = this.offsetTop + 'px';
+          newImage.style.left = this.offsetLeft + this.offsetWidth + 'px';
+          document.body.appendChild(newImage);
+        });
+    
+        ankaraImage.addEventListener('mouseout', function() {
+          var ataturkImage = document.querySelector('img[alt="Atatürk"]');
+          if (ataturkImage) {
+            ataturkImage.remove();
+          }
+        });
+      };
+    </script>
+    
+  </div>
+</body>
+
+
+</html>
